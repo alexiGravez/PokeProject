@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador PokeAPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stylo.css">
+    <link rel="icon" href="img/png-transparent-poke-ball.ico" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explorador Pokemon</h1>
+            <p class="subtitle">© Ing. Diego Alexis Aguilar Cruz, 21070181, Interacción con servicios digitales</p>
+        </header>
+        
+        <div class="content">
+            <div class="request-panel">
+                <h2 class="panel-title">Buscador</h2>
+                <div class="form-group">
+                    <label for="resource">Recurso:</label>
+                    <select id="resource">
+                        <option value="pokemon">Pokémon</option>
+                        <option value="type">Tipos</option>
+                        <option value="ability">Habilidades</option>
+                        <option value="location">Ubicaciones</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="identifier">Identificador (ID o nombre):</label>
+                    <input type="text" id="identifier" placeholder="pikachu o 25" value="pikachu" onkeydown="if(event.key==='Enter'){document.getElementById('send-request').click();}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="endpoint">Endpoint:</label>
+                    <input type="text" id="endpoint" value="https://pokeapi.co/api/v2/" readonly>
+                </div>
+                
+                <button id="send-request">Enviar Solicitud</button>
+                
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Cargando datos...</p>
+                </div>
+                
+                <div class="pokemon-card" id="pokemon-card" style="display: none;">
+                    <div class="pokemon-image">
+                        <img id="pokemon-img" src="" alt="Pokemon">
+                    </div>
+                    <h2 class="pokemon-name" id="pokemon-name">Pikachu</h2>
+                    <div class="pokemon-details">
+                        <div class="detail">
+                            <div class="detail-label">Altura</div>
+                            <div class="detail-value" id="pokemon-height">0.4 m</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Peso</div>
+                            <div class="detail-value" id="pokemon-weight">6.0 kg</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Tipo</div>
+                            <div class="detail-value" id="pokemon-type">Eléctrico</div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail-label">Habilidades</div>
+                            <div class="detail-value" id="pokemon-abilities">rayo</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="response-panel">
+                <h2 class="panel-title">Respuesta Json</h2>
+                <div class="response-content" id="response">
+                    {/* La respuesta se mostrará aquí */}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="info.js"></script>
+</body>
+</html>
