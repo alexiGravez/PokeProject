@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   const sendRequestButton = document.getElementById('send-request');
   const loader = document.getElementById('loader');
   const responseElement = document.getElementById('response');
@@ -70,12 +70,13 @@ sendRequestButton.addEventListener('click', function() {
   
   // Función para mostrar la tarjeta de Pokémon
   function displayPokemonCard(pokemonData) {
-    const pokemonName = document.getElementById('pokemon-name');
-    const pokemonImage = document.getElementById('pokemon-img');
-    const pokemonHeight = document.getElementById('pokemon-height');
-    const pokemonWeight = document.getElementById('pokemon-weight');
-    const pokemonType = document.getElementById('pokemon-type');
-    const pokemonAbilities = document.getElementById('pokemon-abilities');
+    const pokemonName = document.getElementById('pokemon-name'); // Elemento para el nombre del Pokémon
+    const pokemonImage = document.getElementById('pokemon-img'); // Elemento para la imagen del Pokémon
+    const pokemonHeight = document.getElementById('pokemon-height'); // Elemento para la altura del Pokémon
+    const pokemonWeight = document.getElementById('pokemon-weight'); // Elemento para el peso del Pokémon
+    const pokemonType = document.getElementById('pokemon-type'); // Elemento para el tipo del Pokémon
+    const pokemonAbilities = document.getElementById('pokemon-abilities'); // Elemento para las habilidades del Pokémon
+    const pokemonCard = document.getElementById('pokemon-card'); // Elemento de la tarjeta del Pokémon
     
     
     // Actualizar la información del Pokémon
