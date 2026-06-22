@@ -76,7 +76,6 @@ sendRequestButton.addEventListener('click', function() {
     const pokemonWeight = document.getElementById('pokemon-weight'); // Elemento para el peso del Pokémon
     const pokemonType = document.getElementById('pokemon-type'); // Elemento para el tipo del Pokémon
     const pokemonAbilities = document.getElementById('pokemon-abilities'); // Elemento para las habilidades del Pokémon
-    const pokemonCard = document.getElementById('pokemon-card'); // Elemento de la tarjeta del Pokémon
     
     
     // Actualizar la información del Pokémon
